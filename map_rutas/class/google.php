@@ -28,6 +28,25 @@
 	    	}
 	    	return $option;
 	    }
+		public function get_conductores(){
+	    	$sql = $this->db->query("SELECT id_usuario, nombre, asientos FROM aventador ORDER BY asientos DESC");
+	    	$option = '';
+	    	foreach ($sql as $key){
+	    		$id = $key['id_usuario'];
+	    		$name = $key['nombre'];
+				$asientos=$key['asientos'];
+
+				if ($asientos>0) {
+					$option .= '<option value="'.$id.'">'.$name.' - asientos disponibles '.$asientos.' </option>';
+				} else {
+					$option .= '<option value="">Auto lleno </option>';
+				}
+				
+
+	    		
+	    	}
+	    	return $option;
+	    }
 	}
 
 	if(isset($_POST['value'])){

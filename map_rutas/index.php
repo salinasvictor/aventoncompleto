@@ -14,6 +14,15 @@
 	<script type="text/javascript" src="<?=BASE_URL?>/js/functions.js"></script>
 </head>
 <body>
+
+<h1>conductores</h1>
+<td>
+					<select class="txt" onchange="draw_rute(this.value)">
+						<option value="0">Seleccione conductor &#8595;</option>
+						<?=$google->get_conductores();?>
+					</select>
+</td>
+<a class="link" href="http://localhost/proyecto/pagina/index.html">Pagina principal</a><br>
 	<div class="container">
 		<table class="table-elements">
 			<tr>

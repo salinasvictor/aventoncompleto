@@ -1,4 +1,3 @@
-<?php include('registro1.php); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,12 +24,26 @@
             <input type="text" name="matricula" placeholder="Matricula"><br> 
             <input type="text" name="numero" placeholder="Numero de telefono"><br> 
             <input type="text" name="password" placeholder="password"><br>
-            <input type="text" name="vehiculo" placeholder="Tipo de Vehiculo que maneja"><br> 
+            <label>Seleccione su vehiculo </label>
+            
+            
+            <div class="content-select">
+              <select name="vehiculo" placeholder="Tipo de Vehiculo que maneja">
+                <option>Motocicleta</option>
+                <option>Carro</option>
+                <option>Avion</option>
+                <option>Helicoptero</option>
+                <option>Jet</option>
+                
+              </select><br>
+            </div>
 
             <a class="link" href="aventador.html">¿Ya tienes una cuenta?</a><br>
+            <a class="link" href="index.html">Pagina principal</a><br>
 
             <button type="submit" id="btn">Registrate</button>
         </form>
+        
     </section>
 
   </div>
